@@ -160,6 +160,10 @@ public class ZulrahHelperPlugin extends Plugin {
             }
         }
 
+        if (regionId != lastRegionId && regionId==ZULANDRA_REGION_ID) {
+            reset();
+        }
+
         if (INSTANCE_IDS.contains(regionId) && !hotkeysEnabled) {
             toggleHotkeys();
         }
